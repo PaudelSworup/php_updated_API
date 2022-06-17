@@ -13,12 +13,11 @@ if(isset($_POST)){
 
     if($con){
         echo "connected";
-    }
+    
 
    $query = "select * from vehiclerequest where name ='".$name."' and firebase_id='".$userID."'";
     $res =  mysqli_query($con,$query);
-
-   $num = mysqli_num_rows($res);
+    $num = mysqli_num_rows($res);
 
    if($num > 0){
        echo "You alread made a vehicle request of ".$name;
@@ -27,9 +26,8 @@ if(isset($_POST)){
     mysqli_query($con,$insert);
 
    }
-
-   
-
+}
+ 
 
 }
 

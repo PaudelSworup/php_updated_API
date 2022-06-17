@@ -12,7 +12,7 @@ $category = $_POST['category'];
 
 $filename = "IMG".rand().".jpg";
 file_put_contents("images/".$filename,base64_decode($image));
-// file_put_contents("C:/Users/dell/AndroidStudioProjects/VehicleRental/app/Images/".$filename,base64_decode($image));
+
 
 $con = mysqli_connect("localhost","root","","project");
 if($con){
