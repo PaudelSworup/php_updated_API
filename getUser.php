@@ -3,7 +3,7 @@
 if(isset($_GET)){
 
     $con = mysqli_connect("localhost","root","","project");
-    $select_query = "select * from vehiclerequest";
+    $select_query = "select * from userrequest";
     $response = array();
     
     if($con){
@@ -12,7 +12,7 @@ if(isset($_GET)){
     while($res = mysqli_fetch_array($raw)){
         $data [] = $res;
         $response = json_encode(['results' => $data]);  
-       
+      
     }  
     header('Content-Type: application/json');   
     print($response);  
